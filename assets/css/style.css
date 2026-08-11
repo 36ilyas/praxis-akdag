@@ -228,7 +228,7 @@ a:hover { color: var(--teal-dark); }
 
 /* --- Hinweise ------------------------------------------------------------- */
 
-.hinweise { padding: 96px 0 60px; }
+.hinweise { padding-top: 96px; padding-bottom: 60px; }
 .hinweise .h-section { max-width: 640px; }
 .notes { margin-top: 44px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
 .note { border-radius: var(--radius); padding: 32px; background: var(--bg-mint); }
@@ -240,7 +240,7 @@ a:hover { color: var(--teal-dark); }
 
 /* --- Kontakt -------------------------------------------------------------- */
 
-.kontakt { padding: 60px 0 96px; }
+.kontakt { padding-top: 60px; padding-bottom: 96px; }
 .kontakt__grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   border-radius: var(--radius); overflow: hidden; box-shadow: 0 2px 24px rgba(20, 52, 60, .08);
@@ -338,8 +338,8 @@ a:hover { color: var(--teal-dark); }
   #team .split__media { order: -1; }
 
   .leistungen, .ablauf { padding: 64px 0; }
-  .hinweise { padding: 64px 0 40px; }
-  .kontakt { padding: 40px 0 64px; }
+  .hinweise { padding-top: 64px; padding-bottom: 40px; }
+  .kontakt { padding-top: 40px; padding-bottom: 64px; }
   .kontakt__grid { grid-template-columns: 1fr; }
   .kontakt__panel { padding: 36px 28px; }
   .kontakt__map { min-height: 380px; }
