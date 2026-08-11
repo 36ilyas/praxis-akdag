@@ -40,6 +40,9 @@ Dann http://localhost:5599 öffnen.
   die Karte erst nach Einwilligung nachladen (Zwei-Klick-Lösung).
 - **Bewertungszahl prüfen:** „5,0 aus 316 Bewertungen" stammt aus dem Entwurf und sollte
   mit dem aktuellen Stand des Google-Profils abgeglichen werden.
+- **Standort Krefeld vervollständigen:** Aktuell steht dort nur „Ostwall 95, Krefeld".
+  Es fehlen Postleitzahl, Telefonnummer und Sprechzeiten. Die Karte im Kontaktbereich und
+  die schema.org-Daten beziehen sich bisher ausschließlich auf Mönchengladbach.
 
 ## Veröffentlichung
 
