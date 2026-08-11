@@ -3,8 +3,9 @@
 Statische Website für die Facharztpraxis für Psychiatrie und Psychotherapie,
 Lindenstraße 260, 41063 Mönchengladbach.
 
-Umgesetzt aus dem Design-Entwurf in [`entwurf1/`](entwurf1/) — reines HTML und CSS,
-kein Build-Schritt, kein JavaScript (das Mobilmenü läuft über eine CSS-Checkbox).
+Umgesetzt aus dem Design-Entwurf in [`entwurf1/`](entwurf1/) — reines HTML und CSS ohne
+Build-Schritt. Das Mobilmenü öffnet über eine CSS-Checkbox; einzig zum Schließen nach
+einem Klick auf einen Menüpunkt laufen fünf Zeilen JavaScript.
 
 ## Struktur
 

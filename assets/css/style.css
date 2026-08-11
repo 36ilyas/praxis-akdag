@@ -118,7 +118,8 @@ a:hover { color: var(--teal-dark); }
   backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
-.header .wrap { padding-top: 16px; padding-bottom: 16px; display: flex; align-items: center; gap: 24px; }
+.header .wrap { padding-top: 16px; padding-bottom: 16px; display: flex; align-items: center; gap: 24px; position: relative; }
+.header__menu { display: contents; }
 
 .brand { display: flex; align-items: center; gap: 12px; }
 .brand__mark {
@@ -300,21 +301,35 @@ a:hover { color: var(--teal-dark); }
   .brand__name { font-size: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .brand__sub { font-size: 10.5px; letter-spacing: .06em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .nav-toggle__btn { display: flex; flex: none; width: 44px; height: 44px; margin-left: 0; }
-  .nav {
-    display: none; order: 3; width: 100%; margin-left: 0;
-    flex-direction: column; align-items: flex-start; gap: 4px;
-    padding-top: 12px; border-top: 1px solid var(--line);
+
+  /* Menü als Overlay unter dem Header — schiebt den Seiteninhalt nicht nach unten */
+  .header__menu {
+    display: none;
+    position: absolute; top: 100%; left: 0; right: 0; z-index: 60;
+    flex-direction: column;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 18px 32px rgba(20, 52, 60, .12);
+    padding: 6px 22px 20px;
   }
-  .nav a { padding: 10px 0; font-size: 17px; }
-  .header__actions { display: none; order: 4; width: 100%; }
-  .nav-toggle:checked ~ .nav,
-  .nav-toggle:checked ~ .header__actions { display: flex; }
+  .nav-toggle:checked ~ .header__menu { display: flex; }
+
+  .nav { display: flex; width: 100%; margin-left: 0; flex-direction: column; align-items: stretch; gap: 0; }
+  .nav a { padding: 13px 0; font-size: 17px; border-bottom: 1px solid var(--line); }
+  .nav a:last-child { border-bottom: 0; }
+  .header__actions { display: flex; width: 100%; margin-top: 14px; }
   .header__actions .btn { flex: 1; text-align: center; }
 
   .split { grid-template-columns: 1fr; }
-  .hero__media { height: 380px; }
+  .hero__media { height: 300px; }
   .hero__wrap { padding: 0; }
   .hero__card { position: static; width: auto; margin: -48px 22px 0; padding: 36px 28px; }
+  .hero__title { line-height: 1.08; }
+  .hero__text { margin-top: 16px; font-size: 17.5px; line-height: 1.5; }
+
+  .lead { font-size: 17px; line-height: 1.6; }
+  .card__text, .step__text, .note__text { line-height: 1.58; }
+  .footer__about { line-height: 1.6; }
 
   #praxis { padding-top: 64px; padding-bottom: 64px; }
   .split { gap: 40px; }
@@ -337,6 +352,7 @@ a:hover { color: var(--teal-dark); }
   .topbar { font-size: 12.5px; }
   .topbar .wrap { gap: 12px; }
   .cards, .steps, .notes { grid-template-columns: 1fr; }
+  .hero__media { height: 260px; }
   .hero__card { padding: 30px 24px; }
   .kontakt__panel { padding: 30px 22px; }
   .note, .card__body { padding: 26px 24px 30px; }
